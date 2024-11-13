@@ -1,5 +1,5 @@
 @Repository
-public interface RepositoryClient implements JpaRepostory(ReportDTO, Long){
+public interface RepositoryClient implements JpaRepostory<ReportDTO, Long>{
 
     @Query("SELECT new com.example.ReportDTO(c.id, c.nombre, COUNT(t.id) AS cantTransacciones, " +
         "AVG(t.total) AS promedio, " +
