@@ -15,6 +15,6 @@ sucesivamente.
 Entidades:
 
 Empleado(int id, string nombre, string apellido,int id_jefe)
-Tareas(int id, string nombre, time horas_trabajadas, date inicio_tarea)
+Tareas(int id, string nombre, time horas_trabajadas, date fecha, int fk_empleado)
 
-ReportDTOHoras(int idEmpleado, int cantidad_horas)
+ReportDTOHoras(int id, String nombre, int horas_trabajadas, String nombre_empleado)
