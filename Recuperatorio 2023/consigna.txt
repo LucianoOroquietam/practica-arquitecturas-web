@@ -7,7 +7,7 @@ distintas tareas que tengan asignadas. para un periodo de tiempo dado. La inform
 de los proyectos la provee un sistema externo mediante una API REST.
 
 Un servicio que retorna la cadena de jefes de un empleado. Para esto, considerar que cada empleado
-reporta a un jefe directo , y a su vez acada jefe puede reportar a otro jefe(superior) y asi
+reporta a un jefe directo , y a su vez a cada jefe puede reportar a otro jefe(superior) y asi
 sucesivamente.
 
 
@@ -18,3 +18,6 @@ Empleado(int id, string nombre, string apellido,int id_jefe)
 Tareas(int id, string nombre, time horas_trabajadas, date fecha, int fk_empleado)
 
 ReportDTOHoras(int id, String nombre, int horas_trabajadas, String nombre_empleado)
+
+
+

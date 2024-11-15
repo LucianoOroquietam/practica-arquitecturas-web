@@ -1,4 +1,4 @@
-
+import java.net.http.HttpClient;
 
 @RestController
 @RequestMapping("/api/empleado")
@@ -13,6 +13,13 @@ public class ControllerEmpleado {
     de los proyectos la provee un sistema externo mediante una API REST.
 
     /api/empleado/horas/5?fecha_inicio=x&fecha_fin=y
+
+
+    Un servicio que retorna la cadena de jefes de un empleado. Para esto, considerar que cada empleado
+    reporta a un jefe directo , y a su vez a cada jefe puede reportar a otro jefe(superior) y asi
+    sucesivamente.
+
+
     */
 
     @GetMapping("/horas/{id}")
@@ -21,10 +28,23 @@ public class ControllerEmpleado {
             if (id > 0 && fecha_inicio != null && fecha_fin != null){
                 return ResponseEntity.status(HttpStatus.OK).body(serviceEmpleado.getHoras(id,fecha_inicio,fecha_fin));
             } else {
-                return ResponseEntity.status(HTTPstatus.BAD_REQUEST).body("Le erraste pa");
+                return ResponseEntity.status(HTTPstatus.BAD_REQUEST).body("Verifique los datos ingresados");
             }
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Ocurrio un error inesperado en el server");
+        }
+    }
+
+    @GetMapping("/{id_jefe}/cadena-jefes")
+    public ResponseEntity<?> getCadenaJefes(@PathVariable int id_jefe){
+        try {
+            if (id_jefe > 0){
+                return ResponseEntity.status(HttpStatus.OK).body(serviceEmpleado.getCadenaJefes(id_jefe));
+            }else{
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("ingrese un jefe valido");
+            }
+        }catch (Exception e){
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("ocurrio un error en el sv");
         }
     }
 

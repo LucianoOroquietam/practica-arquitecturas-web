@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Recuperatorio 2023.iml" filepath="$PROJECT_DIR$/.idea/Recuperatorio 2023.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicio_empleado/Service/Service.iml" filepath="$PROJECT_DIR$/microservicio_empleado/Service/Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicio_empleado/microservicio_empleado.iml" filepath="$PROJECT_DIR$/microservicio_empleado/microservicio_empleado.iml" />
+    </modules>
+  </component>
+</project>
