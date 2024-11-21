@@ -17,6 +17,8 @@ public class ServiceEmpleado {
     }*/
 
 
+
+
     public List<CadenaJefeDTO> getCadenaJefes(int id_jefe){
         //hacemos una lista para guardar la cadena de jefes que nos piden
        List<CadenaJefeDTO> cadenaJefeDTO = new ArrayList<>();

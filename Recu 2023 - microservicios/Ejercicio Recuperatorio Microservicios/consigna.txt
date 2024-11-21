@@ -1,0 +1,18 @@
+3)
+Ejemplifique en pseudo-codigo, en base a una arquitectura de microservicios en SpringBoot.
+como desarrollaria los siguientes servicios:
+
+Un servicio que consulte la cantidad de horas trabajadas por una persona (empleado) en
+distintas tareas que tengan asignadas. para un periodo de tiempo dado. La informacion de tareas
+de los proyectos la provee un sistema externo mediante una API REST. (Microservicio Tareas)
+
+Un servicio que retorna la cadena de jefes de un empleado. Para esto, considerar que cada empleado
+reporta a un jefe directo , y a su vez a cada jefe puede reportar a otro jefe(superior) y asi
+sucesivamente. (Microservicio Empleado)
+
+
+
+Entidades:
+
+Tareas (Long id_tarea, string nombre, int horas_trabajadas, date fecha)
+Empleado (Long id_empleado, string nombre, Long id_jefe)

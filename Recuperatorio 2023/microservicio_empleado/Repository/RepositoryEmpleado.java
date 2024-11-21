@@ -7,7 +7,7 @@
       Tareas(int id, string nombre, time horas_trabajadas, date fecha, int fk_empleado)
 * */
 @Repository
-public interface RepositoryEmpleado extends JpaRepository<empleado, long>{
+public interface RepositoryEmpleado extends JpaRepository<empleado, Long>{
 
     @Query("SELECT new com.example.demo.ReportDTOHoras(t.id, t.nombre, SUM(t.horas_trabajadas), e.nombre) " +
             "FROM Empleado e " +

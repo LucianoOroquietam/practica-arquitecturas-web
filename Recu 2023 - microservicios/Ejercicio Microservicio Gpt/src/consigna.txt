@@ -1,0 +1,18 @@
+Ejemplifique en pseudo-código, en base a una arquitectura de microservicios en Spring Boot, cómo desarrollaría los siguientes servicios:
+
+Un servicio que consulte el historial de compras realizadas por un cliente en diferentes tiendas asociadas, para un periodo de tiempo específico.
+La información sobre las compras es proporcionada por un sistema externo mediante una API REST.
+
+Un servicio que devuelva la lista de recomendaciones personalizadas para un cliente, basada en su historial de compras y las categorías de productos más adquiridos.
+Para esto, considere las recomendaciones son generadas dinámicamente.
+
+Además de dar el pseudo-código, comente sobre la estructura del diseño propuesto.
+
+
+
+Entidades:
+
+Cliente(int id_cliente, string nombre)
+
+Compras(int id_compra,  int fk_tienda, date fecha_compra, string nombre, int fk_cliente,List<Producto>productos)
+
